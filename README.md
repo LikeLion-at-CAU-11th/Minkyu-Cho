@@ -1,8 +1,24 @@
+###이건 그냥 냅두도록 하겠습니다 이뻐서 남기고 싶어요
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?size=30&duration=4500&color=F77500&width=600&lines=%F0%9F%A6%81_Welcome_Minkyu_Cho_%F0%9F%A6%81+)](https://git.io/typing-svg)
 
-<div align="center">
+<br />
 
-![소개_인사하는 사자](https://user-images.githubusercontent.com/81146131/221498526-e2db6afd-e36d-447c-ab58-58069793bedf.gif)
+### **자기소개🌙**
 
+<img src = "https://velog.velcdn.com/images/mingle_1017/post/2aba42a3-07f9-49f0-9abc-b41cd34d998e/image.jpeg" width="40%" height = "30%" >
 
-</div>
+[README.md로 뭔가 부족하다싶으면 여기를 보시면 됩니다.](https://www.notion.so/d27922ca4aa24de58ceda9fc9cb1344f)
+
+## **기본정보🔎**
+
+1. 파트 : 프론트엔드 웹(WEB)👨‍💻
+2. 왜 이 파트를 하게 되었는가? 시작할 때 WEB으로 시작하다보니 자연스럽게 되었다😌
+3. 요즘하고 있는 일?(아무말 대잔치🎉) : 기존 프로젝트 진행하던 거에서 여러 기능을 추가한 새로운 버전을 만들고 있고, 영어공부를 하고 있다. 아 또 최근에는 여태까지 한 거를 정리하고 글로 남기고 있다.
+   **최근꺼는 개발중이라 못 보여드리고 예전에 했던 기능들 중 일부(다시 바꾸려고 합니다)**
+   ![💌편지기능 일부](https://velog.velcdn.com/images/mingle_1017/post/ceb7c85a-0f24-497c-adaf-8b60378cb1cd/image.mp4)
+4. 취미? 게임은 최근에 없어져서 요즘 취미랄게 없습니다. 그냥 스케줄대로 딱딱 맞춰 살아가고 있습니다.
+5. 좋아하는 거 & 싫어하는 거 : 싫어하는 건 갑작스러운걸 별로 좋아하지 않습니다. 일정이 비어있으면 괜찮지만 갑자기 옮기라하면 꽤 힘들어합니다😅 좋아하는 건 침대🛏️...이러면 너무 성의없어보이죠? 근데 불호만 확실히 있고 그 외에는 다 좋아하는 편이라서 그런 것 같습니당 돌아다니는 것도 좋아하고 집에만 있는 것도 좋아하구... 네.. 그렇습니다..(근데 이렇게 쓰는 거 맞아요?🤔)
+
+### **하고싶은 말**
+
+여러분들 잘 부탁드려요!
