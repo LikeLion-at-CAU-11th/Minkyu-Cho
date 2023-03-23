@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "BlackAndWhite";
+  src: url("/week3/BlackAndWhitePicture-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Gugi-Regular";
+  src: url("/week3/Gugi-Regular.ttf");
+}
+
+.BlackAndWhite {
+  font-family: "BlackAndWhite";
+}
+
+.Gugi {
+  font-family: "Gugi-Regular";
+}
+
+#rainbow {
+  width: 720px;
+  height: 720px;
+  margin: auto;
+  background-image: linear-gradient(
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+#mint {
+  width: 720px;
+  height: 720px;
+  margin: auto;
+  background-image: linear-gradient(#a8f7e6, #6f4f28);
+}
+
+#flexdiv {
+  margin: auto auto 100px 40px;
+  display: flex;
+  position: sticky;
+  top: 0px;
+}
+
+#flexdiv2 {
+  margin-left: 40px;
+  display: flex;
+  position: sticky;
+  top: 0px;
+}
+
+#flexdiv > p {
+  font-weight: 900;
+  font-size: x-large;
+  letter-spacing: 2cm;
+}
+
+#flexdiv2 > p {
+  font-weight: bolder;
+  font-size: x-large;
+}
+.question {
+  margin: -20px 0px 0px -100px;
+}
+
+.p1 {
+  color: red;
+}
+
+.p2 {
+  color: orange;
+}
+
+.p3 {
+  color: yellow;
+}
+
+.p4 {
+  color: greenyellow;
+}
+
+.p5 {
+  color: blue;
+}
+
+.p6 {
+  color: darkblue;
+}
+
+.p7 {
+  color: violet;
+}
+
+#listcss > li {
+  font-size: large;
+  margin-bottom: 20px;
+}
