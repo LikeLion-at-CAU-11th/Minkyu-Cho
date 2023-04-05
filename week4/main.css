@@ -1,0 +1,340 @@
+@font-face {
+  font-family: "NanumGothic";
+  src: url(/week4/NanumGothic-Regular.ttf);
+}
+
+.NanumGothic {
+  font-family: "NanumGothic";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#page1,
+#page2,
+#page4 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+}
+
+.container {
+  width: 70%;
+  height: 50%;
+  background-color: white;
+  border: 5px solid lightblue;
+  border-radius: 30px;
+  opacity: 0.85;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  flex-basis: 100%;
+  width: 90%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.title {
+  width: 100%;
+  font-size: x-large;
+  font-weight: bolder;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.intro {
+  color: white;
+  font-weight: bolder;
+  font-size: x-large;
+  z-index: 100;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn 5s ease-out forwards;
+}
+
+.p_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_a {
+  color: white;
+  z-index: 200;
+  text-decoration: none;
+  margin-top: 50px;
+  border: 1px solid white;
+  padding: 10px 30px;
+}
+
+a {
+  color: lightblue;
+  z-index: 200;
+  text-decoration: none;
+  margin-top: 10px;
+  border: 1px solid lightblue;
+  padding: 10px 30px;
+}
+
+#page1 {
+  background-image: url(https://wallpapercave.com/wp/wp2763910.gif);
+  background-size: 100% 100%;
+}
+
+#page1 p {
+  margin: 10px 0px 10px 0px;
+}
+
+#page2 {
+  background-image: url(https://img.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg?w=1480&t=st=1680240012~exp=1680240612~hmac=d34281414258127bc1aedef2c2fcc8e7379b85b77feb7d5fc217bd4dba885156);
+  background-size: 100% 100%;
+}
+
+#page3 {
+  background-color: pink;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page4 {
+  background: #2851a6 url("http://i.stack.imgur.com/spmUM.gif") left repeat-x;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-in {
+  animation: change 0.5s ease forwards;
+}
+
+.image_container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_size {
+  width: 70%;
+  height: 100%;
+}
+
+.intro_container {
+  width: 50%;
+}
+
+#page3 .next_a {
+  color: #f4f3ea;
+  margin: 30px;
+  border: 1px solid white;
+}
+#page3 ol {
+  flex: 1;
+  font-size: 0;
+  width: 100%;
+  padding: 250px 0;
+  transition: all 1s;
+}
+#page3 ol li {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 15%;
+  height: 3px;
+  background: #fff;
+}
+#page3 ol li:last-child {
+  width: 14%;
+}
+#page3 ol li:not(:first-child) {
+  margin-left: 14px;
+}
+#page3 ol li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1px);
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #f45b69;
+}
+#page3 ol li div {
+  position: absolute;
+  left: calc(100% + 7px);
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 15px;
+  font-size: 1rem;
+  white-space: normal;
+  color: black;
+  background: white;
+}
+
+#page3 ol li div::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#page3 ol li:nth-child(odd) div {
+  top: -16px;
+  transform: translateY(-100%);
+}
+
+#page3 ol li:nth-child(odd) div::before {
+  top: 100%;
+  border-width: 8px 8px 0 0;
+  border-color: white transparent transparent transparent;
+}
+
+#page3 ol li:nth-child(even) div {
+  top: calc(100% + 16px);
+}
+
+#page3 ol li:nth-child(even) div::before {
+  top: -8px;
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent white;
+}
+
+#page3 time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+@keyframes change {
+  from {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .container {
+    width: 50%;
+    height: 70%;
+    flex-direction: column;
+  }
+
+  .nav {
+    flex-basis: 5%;
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: bolder;
+  }
+
+  #page3 {
+    display: block;
+  }
+
+  #page3 .next_a {
+    color: #f4f3ea;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+  }
+  #page3 ol {
+    margin: -65% 50% 0% 50%;
+    font-size: 1;
+    width: 0;
+    height: 100%;
+  }
+  #page3 ol li {
+    left: 50%;
+    width: 3px;
+    height: 15%;
+  }
+  #page3 ol li:last-child {
+    width: 0%;
+    height: 14%;
+  }
+  #page3 ol li:not(:first-child) {
+    margin-left: 0px;
+    margin-top: 14px;
+  }
+  #page3 ol li:not(:last-child)::after {
+    top: calc(100% + 1px);
+    left: -5px;
+  }
+
+  #page3 ol li div::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  #page3 ol li:nth-child(odd) div {
+    top: 0px;
+    left: -16px;
+    transform: translateX(-100%);
+    font-size: 8px;
+    width: 100px;
+  }
+
+  #page3 ol li:nth-child(odd) div::before {
+    top: 100%;
+    border-width: 8px 8px 0 0;
+    border-color: transparent;
+  }
+
+  #page3 ol li:nth-child(even) div {
+    left: calc(100% + 16px);
+    font-size: 8px;
+    width: 100px;
+  }
+
+  #page3 ol li:nth-child(even) div::before {
+    top: -8px;
+    border-width: 8px 0 0 8px;
+    border-color: transparent transparent transparent white;
+  }
+}
