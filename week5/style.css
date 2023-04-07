@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Delicious Handrawn";
+  font-size: 30px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+#header-wrapper {
+  margin-bottom: 10px;
+}
+
+#content-wrapper {
+  width: 500px;
+  height: 500px;
+  border: black 3px solid;
+  border-radius: 20px;
+}
+
+.score-section {
+  justify-content: space-evenly;
+  flex-basis: 15%;
+}
+
+.display-section {
+  justify-content: space-evenly;
+  height: 60%;
+}
+
+.display-title {
+  margin: 20px 0px 20px 0px;
+}
+
+.button-section {
+  justify-content: center;
+  flex-basis: 25%;
+}
+
+.button-style {
+  background-color: transparent;
+  color: black;
+  border-radius: 20%;
+  margin-top: 20px;
+}
+
+#my-hand-icon {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 80px;
+  margin: 20px 0px 20px 0px;
+}
+
+#computer-hand-icon {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 80px;
+  margin: 20px 0px 20px 0px;
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+  border: black 4px solid;
+  font-size: 60px;
+}
+
+#display-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-display-text,
+.computer-display-text {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+}
+
+#header-wrapper > button {
+  all: unset;
+}
+
+#reset-button {
+  font-size: 15px;
+  border: black solid 2px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
