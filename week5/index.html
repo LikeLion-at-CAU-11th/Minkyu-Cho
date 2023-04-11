@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/week5/style.css" />
+    <title>가위바위보</title>
+  </head>
+  <body id="dark-theme">
+    <div id="header-wrapper" class="row">
+      <div>rock scissos paper!</div>
+      <button>
+        <i id="reset-button" class="fa-solid fa-arrow-rotate-left"></i>
+      </button>
+    </div>
+    <div id="content-wrapper" class="column">
+      <section class="score-section row">
+        <div id="my-score">0</div>
+        <div class="score">score</div>
+        <div id="com-score">0</div>
+      </section>
+      <section class="display-section row">
+        <div class="display-main">
+          <div class="display-title">Me</div>
+          <div id="my-hand-icon"></div>
+          <div id="my-display-text">???</div>
+        </div>
+        <div id="display-result"></div>
+        <div class="display-main">
+          <div class="display-title">Computer</div>
+          <div id="computer-hand-icon"></div>
+          <div id="computer-display-text">???</div>
+        </div>
+      </section>
+      <section class="button-section row">
+        <div id="rock">
+          <i id="button" class="fa-regular fa-hand-back-fist"></i>
+        </div>
+        <div id="scissors">
+          <i id="button" class="fa-regular fa-hand-scissors fa-rotate-90"></i>
+        </div>
+        <div id="paper"><i id="button" class="fa-regular fa-hand"></i></div>
+      </section>
+    </div>
+    <div class="row">
+      <button id="dark-button" class="button-style">DarkMode</button>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/001200a43b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/week5/app.js"></script>
+  </body>
+</html>
