@@ -7,7 +7,7 @@ import Pagination from "./Pagination";
 import { useParams } from "react-router-dom";
 
 const LionInfoModal = () => {
-  const { number } = useParams();
+  const { number, title } = useParams();
   const [userData, setUserData] = useState([]);
   const [clickBtn, setClickBtn] = useState("");
   //이거 나눌때는 이거를 변경해서 불러주는 형식으로 하면 된다. FilterButton을 누르면 해당 clickNum에 맞는 API를 호출한다.
@@ -60,7 +60,7 @@ const LionInfoModal = () => {
           );
         })}
       </ButtonDom>
-      {clickBtn === "All" ? (
+      {title === "All" ? (
         <>
           {/* <UserDataSection
             userData={userData.slice(clickNum * 4 - 4, clickNum * 4)}
