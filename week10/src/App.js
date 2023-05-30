@@ -9,8 +9,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LionInfo />}>
-        <Route path="info/:type" element={<LionInfoModal />} />
-        <Route path="info/:type/:number" element={<LionInfoModal />} />
+        <Route path="info/:type/:title" element={<LionInfoModal />} />
+        <Route path="info/:type/:title/:number" element={<LionInfoModal />} />
         <Route path="test/:pageNum" element={<LionTestModal />} />
         <Route path="text" element={<LionTest />} />
         <Route path="start" element={<Startpage />} />

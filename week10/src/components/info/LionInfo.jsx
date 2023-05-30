@@ -45,7 +45,7 @@ const LionInfo = () => {
           clicked={clicked === "아기사자"}
           onClick={() => {
             setClicked("아기사자");
-            navigate("/info/no");
+            navigate("/info/All/1");
           }}
         >
           아기사자 정보

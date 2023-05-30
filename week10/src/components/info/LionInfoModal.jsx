@@ -51,8 +51,8 @@ const LionInfoModal = () => {
           return (
             <FilterButton
               key={i}
-              title={c.title}
-              type={c.type}
+              datatitle={c.title}
+              datatype={c.type}
               setUserData={setUserData}
               clickBtn={clickBtn}
               setClickBtn={setClickBtn}
@@ -65,7 +65,7 @@ const LionInfoModal = () => {
           {/* <UserDataSection
             userData={userData.slice(clickNum * 4 - 4, clickNum * 4)}
           /> */}
-          <UserDataSection userData={userData} />
+          <UserDataSection userData={userData} setUserData={setUserData} />
           <Pagination
             clickNum={parseInt(number)}
             // page에서 userData를 조작해야되기 때문에 이를 보내준다.
@@ -73,7 +73,7 @@ const LionInfoModal = () => {
           />
         </>
       ) : (
-        <UserDataSection userData={userData} />
+        <UserDataSection userData={userData} setUserData={setUserData} />
       )}
     </Dom>
   );

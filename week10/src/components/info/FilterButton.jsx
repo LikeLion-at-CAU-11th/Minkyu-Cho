@@ -1,32 +1,38 @@
 import styled from "styled-components";
 
-import React from "react";
+import React, { useEffect } from "react";
 import {
   getUserPerPage,
   getUserperGener,
   getUserperStack,
 } from "../../API/lioninfo";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const FilterButton = ({ title, type, setUserData, clickBtn, setClickBtn }) => {
+const FilterButton = ({
+  datatitle,
+  datatype,
+  setUserData,
+  clickBtn,
+  setClickBtn,
+}) => {
   const handleButtonColor = () => {
-    setClickBtn(title);
+    setClickBtn(datatitle);
   };
   const navigate = useNavigate();
   const handleClickButton = async () => {
     // type에 따라서 어떤 api를 호출할건지를 결정해주는 함수
-    if (type === "page") {
+    if (datatype === "page") {
       //page api 호출
       const response = await getUserPerPage(1);
       // const response = await getUserPerPage(clickNum);
       setUserData(response.data.data);
-    } else if (type === "stack") {
+    } else if (datatype === "stack") {
       //stack api 호출
-      const response = await getUserperStack(title);
+      const response = await getUserperStack(datatitle);
       setUserData(response.data.data);
-    } else if (type === "gender") {
+    } else if (datatype === "gender") {
       //gender api 호출
-      const response = await getUserperGener(title);
+      const response = await getUserperGener(datatitle);
       setUserData(response.data.data);
     }
   };
@@ -36,14 +42,14 @@ const FilterButton = ({ title, type, setUserData, clickBtn, setClickBtn }) => {
         handleClickButton();
         handleButtonColor();
         {
-          title === "All"
-            ? navigate(`/info/${title}/1`, { replace: true })
-            : navigate(`/info/${title}`, { replace: true });
+          datatype === "page"
+            ? navigate(`/info/${datatype}/${datatitle}/1`, { replace: true })
+            : navigate(`/info/${datatype}/${datatitle}`, { replace: true });
         }
       }}
-      clicked={clickBtn === title}
+      clicked={clickBtn === datatitle}
     >
-      {title}
+      {datatitle}
     </Button>
   );
 };
