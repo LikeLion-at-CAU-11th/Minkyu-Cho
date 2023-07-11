@@ -16,8 +16,17 @@ const Home = () => {
     console.log(pw);
   };
   const onLogin = async () => {
-    await login(id, pw);
-    router("/mypage");
+    if (pw.length === 0 || id.length === 0) {
+      alert("아이디와 비밀번호를 입력해주세요");
+    } else {
+      const success = await login(id, pw);
+      if (success === true) {
+        router("/mypage");
+      } else {
+        setId("");
+        setPw("");
+      }
+    }
   };
   return (
     <>
