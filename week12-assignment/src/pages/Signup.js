@@ -12,8 +12,13 @@ const Signup = () => {
   const [age, onChangeAge] = useForm();
   const router = useNavigate();
   const onClick = async () => {
-    await signUp(id, pw, name, age);
-    router("/");
+    const isEmpty = [id, pw, name, age].every((value) => value.length === 0);
+    const result = await signUp(id, pw, name, age);
+    if (isEmpty || result === false) {
+      alert("모두 채워넣어주세요");
+    } else {
+      router("/");
+    }
   };
   return (
     <Wrapper>
