@@ -1,18 +1,35 @@
 import React from "react";
 import { Input, Inputs, Title, Wrapper } from "../components/Common";
+import { useForm } from "../hooks/useForm";
 import { styled } from "styled-components";
+import { signUp } from "../API/signUp";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const [id, onChangeId] = useForm();
+  const [pw, onChangePw] = useForm();
+  const [name, onChangeName] = useForm();
+  const [age, onChangeAge] = useForm();
+  const router = useNavigate();
+  const onClick = async () => {
+    await signUp(id, pw, name, age);
+    router("/");
+  };
   return (
     <Wrapper>
       <Title>회원가입</Title>
       <Inputs>
-        <Input />
-        <Input />
-        <Input />
-        <Input />
+        <Input placeholder="아이디" value={id} onChange={onChangeId} />
+        <Input
+          placeholder="비밀번호"
+          type="password"
+          value={pw}
+          onChange={onChangePw}
+        />
+        <Input placeholder="이름" value={name} onChange={onChangeName} />
+        <Input placeholder="나이" value={age} onChange={onChangeAge} />
       </Inputs>
-      <Button>SignUp</Button>
+      <Button onClick={onClick}>SignUp</Button>
     </Wrapper>
   );
 };
