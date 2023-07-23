@@ -34,10 +34,12 @@ const Modal = () => {
     <ModalWrapper>
       <ModalPage>
         <Header mode={mode.main}>정보 확인</Header>
-        다음 정보가 맞으십니까?
-        <div>닉네임 : {userName}</div>
-        <div>이메일 : {email}</div>
-        <div>기분정도 : {range}</div>
+        <InfomationWrapper>
+          <h3>다음 정보가 맞으십니까?</h3>
+          <div>닉네임 : {userName}</div>
+          <div>이메일 : {email}</div>
+          <div>기분정도 : {range}</div>
+        </InfomationWrapper>
         <ButtonWrapper>
           <Button
             mode={mode.button}
@@ -75,7 +77,7 @@ const ModalWrapper = styled.div`
 
 const ModalPage = styled.div`
   margin: 10px;
-  width: 80%;
+  width: 70%;
   height: 50%;
   z-index: 150;
   position: absolute;
@@ -89,10 +91,19 @@ const ModalPage = styled.div`
   overflow: auto;
 `;
 
-export const ButtonWrapper = styled.div`
+const InfomationWrapper = styled.div`
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   position: absolute;
+  top: 80%;
   width: 70%;
   z-index: 30;
   left: 50%;
