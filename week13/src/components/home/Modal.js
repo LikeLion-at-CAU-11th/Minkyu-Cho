@@ -1,16 +1,35 @@
 import React, { useContext } from "react";
 import { styled } from "styled-components";
 import { ThemeContext } from "../../context/context";
-import { emailAtom, rangeAtom, userNameAtom } from "../../recoil/atoms";
-import { useRecoilValue } from "recoil";
+import {
+  emailAtom,
+  isModalOpenAtom,
+  isSubmittedAtom,
+  rangeAtom,
+  userNameAtom,
+} from "../../recoil/atoms";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { Button } from "../common";
 import { Header } from "../Layout";
+import { useNavigate } from "react-router-dom";
 
 const Modal = () => {
   const mode = useContext(ThemeContext);
   const userName = useRecoilValue(userNameAtom);
   const email = useRecoilValue(emailAtom);
   const range = useRecoilValue(rangeAtom);
+  const navigate = useNavigate();
+  const isSubmitted = useSetRecoilState(isSubmittedAtom);
+  const isModalOpen = useSetRecoilState(isModalOpenAtom);
+  const onClick = (clicktype) => {
+    if (clicktype === "confirm") {
+      isSubmitted(true);
+      isModalOpen(false);
+      navigate("/mypage");
+    } else {
+      isModalOpen(false);
+    }
+  };
   return (
     <ModalWrapper>
       <ModalPage>
@@ -20,8 +39,22 @@ const Modal = () => {
         <div>이메일 : {email}</div>
         <div>기분정도 : {range}</div>
         <ButtonWrapper>
-          <Button mode={mode.button}>확인</Button>
-          <Button mode={mode.button}>취소</Button>
+          <Button
+            mode={mode.button}
+            onClick={() => {
+              onClick("confirm");
+            }}
+          >
+            확인
+          </Button>
+          <Button
+            mode={mode.button}
+            onClick={() => {
+              onClick("cancel");
+            }}
+          >
+            취소
+          </Button>
         </ButtonWrapper>
       </ModalPage>
     </ModalWrapper>
