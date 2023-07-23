@@ -10,6 +10,11 @@ export const emailAtom = atom({
   default: "@@@",
 });
 
+export const rangeAtom = atom({
+  key: "range",
+  default: "",
+});
+
 export const isSubmittedAtom = atom({
   key: "isSubmitted",
   default: false,
