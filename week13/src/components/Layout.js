@@ -71,7 +71,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-const Header = styled.div`
+export const Header = styled.div`
   display: flex;
   height: 100px;
   width: 100%;

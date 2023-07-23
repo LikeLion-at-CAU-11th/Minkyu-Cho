@@ -19,3 +19,8 @@ export const isSubmittedAtom = atom({
   key: "isSubmitted",
   default: false,
 });
+
+export const isModalOpenAtom = atom({
+  key: "isModalOpen",
+  default: false,
+});

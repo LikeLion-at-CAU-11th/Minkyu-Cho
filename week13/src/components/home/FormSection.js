@@ -3,16 +3,17 @@ import Form from "./Form";
 import { Button } from "../common";
 import { ThemeContext } from "../../context/context";
 import { useNavigate } from "react-router-dom";
-import { useSetRecoilState } from "recoil";
-import { isSubmittedAtom } from "../../recoil/atoms";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { isModalOpenAtom, isSubmittedAtom } from "../../recoil/atoms";
+import Modal from "./Modal";
 
 const FormSection = () => {
   const mode = useContext(ThemeContext);
   const navigate = useNavigate();
   const isSubmitted = useSetRecoilState(isSubmittedAtom);
+  const [isModalOpen, isSetModalOpen] = useRecoilState(isModalOpenAtom);
   const handleClick = () => {
-    isSubmitted(true);
-    navigate("/mypage");
+    isSetModalOpen(true);
   };
   return (
     <>
@@ -22,6 +23,7 @@ const FormSection = () => {
       <Button mode={mode.button} onClick={handleClick}>
         버튼
       </Button>
+      {isModalOpen && <Modal />}
     </>
   );
 };
