@@ -5,7 +5,12 @@ import { styled } from "styled-components";
 import React, { useContext, useState } from "react";
 import { Button } from "./common";
 import { ThemeContext } from "../context/context";
-import { isSubmittedAtom, userNameAtom, emailAtom } from "../recoil/atoms";
+import {
+  isSubmittedAtom,
+  userNameAtom,
+  emailAtom,
+  rangeAtom,
+} from "../recoil/atoms";
 import { useRecoilValue } from "recoil";
 
 const Layout = ({ children }) => {
@@ -26,6 +31,7 @@ const Layout = ({ children }) => {
 
   const userName = useRecoilValue(userNameAtom);
   const email = useRecoilValue(emailAtom);
+  const range = useRecoilValue(rangeAtom);
   const isSubmitted = useRecoilValue(isSubmittedAtom);
 
   return (
@@ -44,7 +50,9 @@ const Layout = ({ children }) => {
         </Header>
         <div>{children}</div>
         <Footer mode={mode.main}>
-          {!isSubmitted ? "" : `${userName}의 공간 : 이메일 주소 ${email}`}
+          {!isSubmitted
+            ? ""
+            : `${userName}의 공간 : 이메일 주소 ${email}, 오늘 나의 기분 정도 : ${range}`}
         </Footer>
       </Wrapper>
     </ThemeContext.Provider>
