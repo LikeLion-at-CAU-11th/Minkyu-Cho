@@ -2,15 +2,12 @@ import React, { useContext } from "react";
 import Form from "./Form";
 import { Button } from "../common";
 import { ThemeContext } from "../../context/context";
-import { useNavigate } from "react-router-dom";
-import { useRecoilState, useSetRecoilState } from "recoil";
-import { isModalOpenAtom, isSubmittedAtom } from "../../recoil/atoms";
+import { useRecoilState } from "recoil";
+import { isModalOpenAtom } from "../../recoil/atoms";
 import Modal from "./Modal";
 
 const FormSection = () => {
   const mode = useContext(ThemeContext);
-  const navigate = useNavigate();
-  const isSubmitted = useSetRecoilState(isSubmittedAtom);
   const [isModalOpen, isSetModalOpen] = useRecoilState(isModalOpenAtom);
   const handleClick = () => {
     isSetModalOpen(true);
