@@ -12,7 +12,7 @@ export const emailAtom = atom({
 
 export const rangeAtom = atom({
   key: "range",
-  default: "",
+  default: "50",
 });
 
 export const isSubmittedAtom = atom({
